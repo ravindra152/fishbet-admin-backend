@@ -1,0 +1,158 @@
+'use strict'
+
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    const data = [
+      {
+        sc: 10,
+        gc: 100000,
+        is_allow: true,
+        player_limit: null,
+        priority: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 80,
+        gc: 200000,
+        is_allow: true,
+        player_limit: null,
+        priority: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 20,
+        gc: 2000,
+        is_allow: true,
+        player_limit: null,
+        priority: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 100,
+        gc: 1000000,
+        is_allow: true,
+        player_limit: null,
+        priority: 4,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 9,
+        gc: 1000,
+        is_allow: true,
+        player_limit: null,
+        priority: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 8,
+        gc: 100,
+        is_allow: true,
+        player_limit: null,
+        priority: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 1000,
+        gc: 100000,
+        is_allow: true,
+        player_limit: null,
+        priority: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 40,
+        gc: 400000,
+        is_allow: true,
+        player_limit: 300,
+        priority: 2,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 35,
+        gc: 350000,
+        is_allow: true,
+        player_limit: 150,
+        priority: 4,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 45,
+        gc: 450000,
+        is_allow: false,
+        player_limit: null,
+        priority: 3,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 60,
+        gc: 600000,
+        is_allow: true,
+        player_limit: 800,
+        priority: 3,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 70,
+        gc: 700000,
+        is_allow: true,
+        player_limit: 700,
+        priority: 2,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 75,
+        gc: 750000,
+        is_allow: false,
+        player_limit: 100,
+        priority: 2,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 80,
+        gc: 800000,
+        is_allow: true,
+        player_limit: null,
+        priority: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 90,
+        gc: 900000,
+        is_allow: false,
+        player_limit: 50,
+        priority: 4,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        sc: 100,
+        gc: 1000000,
+        is_allow: true,
+        player_limit: 1000,
+        priority: 2,
+        created_at: new Date(),
+        updated_at: new Date(),
+      }
+    ]
+
+    await queryInterface.bulkInsert('wheel_division_configurations', data, {})
+  },
+
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('wheel_division_configurations', null, {})
+  }
+}
